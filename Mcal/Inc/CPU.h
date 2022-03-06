@@ -31,9 +31,9 @@
 * \Return value:   : None
 *******************************************************************************/
 #define CPU_DRIVER_StartCriticalSection()		uint32 u32_primaskVal;\
-																						register uint32 __regPriMask __asm("primask");\
-																						u32_primaskVal=__regPriMask;\
-																						__asm("CPSID i")
+						        register uint32 __regPriMask __asm("primask");\
+							u32_primaskVal=__regPriMask;\
+							__asm("CPSID i")
 /******************************************************************************
 * \Syntax          : void CPU_Driver_StopCriticalSection(void)                                      
 * \Description     : Enable primask using CPS instructions                                    
