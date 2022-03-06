@@ -67,18 +67,7 @@ void CPU_Driver_DisableGlobalInterrupts(void)
 	__asm("CPSID i");
 }
 
-//void CPU_Driver_StartCriticalSection(void)
-//{
-//	register uint32 __regPriMask __asm("primask");
-//	u32_primaskVal=__regPriMask;
-//	__asm("CPSID i"); 		
-//}
 
-//void CPU_Driver_StopCriticalSection(void)
-//{
-//	register uint32 __regPriMask __asm("primask");
-//	__regPriMask =u32_primaskVal;
-//}
 
 /**********************************************************************************************************************
  *  END OF FILE: CPU.c

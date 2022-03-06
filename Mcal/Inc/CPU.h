@@ -22,7 +22,7 @@
 //#define CPU_DRIVER_InitCritical()  
 /******************************************************************************
 * \Syntax          : CPU_Driver_StartCriticalSection()                                      
-* \Description     : Disable primask using CPS instructions                                    
+* \Description     : declare a local variable "u32_primaskVal" and store inside it the primask current register value                                    
 *                                                                             
 * \Sync\Async      : Synchronous                                               
 * \Reentrancy      : Reentrant                                             
@@ -36,7 +36,7 @@
                                              __asm("CPSID i")
 /******************************************************************************
 * \Syntax          : void CPU_Driver_StopCriticalSection(void)                                      
-* \Description     : Enable primask using CPS instructions                                    
+* \Description     : restore the local primask register value                                   
 *                                                                             
 * \Sync\Async      : Synchronous                                               
 * \Reentrancy      : Reentrant                                             
