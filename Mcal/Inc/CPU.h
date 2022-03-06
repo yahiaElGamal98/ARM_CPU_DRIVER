@@ -30,10 +30,10 @@
 * \Parameters (out): None                                                      
 * \Return value:   : None
 *******************************************************************************/
-#define CPU_DRIVER_StartCriticalSection()		uint32 u32_primaskVal;\
-						        register uint32 __regPriMask __asm("primask");\
-							u32_primaskVal=__regPriMask;\
-							__asm("CPSID i")
+#define CPU_DRIVER_StartCriticalSection()    uint32 u32_primaskVal;\
+                                             register uint32 __regPriMask __asm("primask");\
+                                             u32_primaskVal=__regPriMask;\
+                                             __asm("CPSID i")
 /******************************************************************************
 * \Syntax          : void CPU_Driver_StopCriticalSection(void)                                      
 * \Description     : Enable primask using CPS instructions                                    
@@ -44,7 +44,7 @@
 * \Parameters (out): None                                                      
 * \Return value:   : None
 *******************************************************************************/
-#define CPU_DRIVER_StopCriticalSection()		__regPriMask=u32_primaskVal
+#define CPU_DRIVER_StopCriticalSection()     __regPriMask=u32_primaskVal
 
 /**********************************************************************************************************************
  *  GLOBAL DATA TYPES AND STRUCTURES
